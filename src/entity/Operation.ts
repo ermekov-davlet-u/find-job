@@ -1,7 +1,7 @@
 import { sequelize } from "../data/connectdb";
-import { DataTypes } from "sequelize"
+import { DataTypes, Op } from "sequelize"
 
-const Operation = sequelize.define("Operation", {
+const Operation = sequelize.define("operation", {
     operationName: {
         type: DataTypes.STRING,
         
