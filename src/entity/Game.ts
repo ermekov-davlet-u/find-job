@@ -1,17 +1,12 @@
 import { sequelize } from "../data/connectdb";
 import { DataTypes } from "sequelize";
 import { PlayingField } from "./PlayingField";
-import { Game } from "./Game";
 
-export const GameType = sequelize.define("game-type", {
-  gameTypeName: {
+export const Game = sequelize.define("game", {
+  gameName: {
     type: DataTypes.STRING,
   },
   description: {
     type: DataTypes.STRING,
   },
 });
-
-
-GameType.hasMany(PlayingField);
-GameType.hasMany(Game);

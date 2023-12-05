@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../data/connectdb";
 import { City } from "./city";
+import { Location } from "./location";
 
 const Area = sequelize.define("area", {
   nameArea: {
@@ -14,5 +15,5 @@ const Area = sequelize.define("area", {
   },
 });
 
-// Area.hasMany(City)
+Area.hasMany(Location)
 export { Area };

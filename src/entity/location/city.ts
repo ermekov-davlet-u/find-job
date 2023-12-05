@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../data/connectdb";
+import { Location } from "./location";
 
 const City = sequelize.define("city", {
   cityName: {
@@ -15,4 +16,5 @@ const City = sequelize.define("city", {
     type: DataTypes.FLOAT,
   },
 });
+City.hasMany(Location)
 export { City };

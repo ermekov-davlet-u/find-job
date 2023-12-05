@@ -12,6 +12,8 @@ import { Team } from "./entity/Team";
 import { GemerType } from "./entity/GemerType";
 import { Player } from "./entity/Player";
 import { Rating } from "./entity/Rating";
+import { PlayingField } from "./entity/PlayingField";
+import { Game } from "./entity/Game";
 
 const app = express();
 app.use(cors());
@@ -45,6 +47,8 @@ app.listen(9000, async () => {
     Team.sync({alter: true});
     Player.sync({alter: true});
     GemerType.sync({alter: true});
+    PlayingField.sync({alter: true});
+    Game.sync({alter: true});
     sequelize.sync({alter: true});
     await sequelize.authenticate();
     console.log("Все модели были успешно синхронизированы.");
