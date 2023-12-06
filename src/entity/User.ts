@@ -18,4 +18,4 @@ export const User = sequelize.define("user", {
 });
 
 User.hasMany(UserPhoto)
-// User.hasOne(Player)
+User.hasOne(Player)

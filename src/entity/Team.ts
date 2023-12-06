@@ -18,10 +18,6 @@ export const TeamPlayer = sequelize.define("team-player", {
       autoIncrement: true,
       primaryKey: true,
       allowNull: false
-    },
-    grade: {                    // оценка студента по данному курсу
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
 });
 
